@@ -18,7 +18,7 @@
     --font-large: 18px;
     --font-medium: 14px;
     --font-small: 12px;
-    --font-micro: 10px;
+    --font-micro: 8px;
 
 }
 
@@ -58,6 +58,10 @@ header{
     padding: var(--top-padding);
     background-color: var(--black-color);
     color: var(--white-color);
+
+        
+    position: sticky;
+    top: 0;
 }
 
 header .logo {
@@ -79,8 +83,9 @@ button{
 
 /* Video Player */
 .player {
-    position: sticky;
-        top: 0;
+    /* 영상고정이 아님 */
+    /* position: sticky;
+    top: 0; */
     text-align: center;
     background-color: var(--black-color);
 }
@@ -139,6 +144,7 @@ body > .info {
     justify-content: space-around;
     /* 위아래만 넣고 양옆은 0 */
     margin: var(--padding) 0;
+    padding-bottom: var(--padding);
 }
 
 .info .action button {
@@ -168,38 +174,47 @@ body > .info {
     justify-content: space-between;
     border-top: 1px solid var(--grey-light-color);
     border-bottom: 1px solid var(--grey-light-color);
-    
+    margin-bottom: var(--padding);
 }
 
 .info .channel .matadata {
     display: flex;
     align-items: center;
+    padding: var(--padding);
 }
 
 .info .channel .matadata img {
     width: var(--avatar-size);
     height: var(--avatar-size);
     border-radius: 50%;
+    margin-right: var(--padding);
 }
 
-.info .channel .metadata .info {
+/* 왜 이렇게 쓰면 인식을 못할까 */
+/* .info .channel .metadata .info { */
+.info {
     display: flex;
     flex-direction: column;
+    
 }
 
 .info .channel .metadata .info .channelName {
     font-size: var(--font-medium);
 }
 
-.info .channel .metadata .info .subscribers {
-    font-size: var(--font-small);
+/* 왜 이렇게 쓰면 인식을 못할까 */
+.info .subscribers {
+    font-size: var(--font-micro);
     color: var(--grey-dark-color);
 }
 
-.info .channel .sucscribe {
+.sucscribe {
     text-transform: uppercase;
-    color: var(--red-color);
+    background-color: var(--red-color);
+    color: var(--white-color);
     font-size: var(--font-medium);
+    margin: var(--padding) 0;
+    padding: 0 calc(var(--padding) / 2);
 }
 
 /* Up Next */
@@ -247,11 +262,21 @@ body > .info {
 }
 
 .upNext .item .info .title {
-    font-size: var(--font-small);
+    
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+
+    font-size: var(--font-medium);
+    margin-bottom: calc(var(--padding)/2);
 }
 
-.upNext .item .info .name,
+.upNext .item .info .name{
+    font-size: var(--font-small);
+    margin-bottom: calc(var(--padding)/3);
+}
 .upNext .item .info .views {
-    font-size: var(--font-micro)
+    font-size: var(--font-micro);
 }
 
