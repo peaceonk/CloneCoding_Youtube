@@ -111,25 +111,42 @@ body > .info {
     margin-right: var(--padding);
 }
 
-.info .metadata .TitleAndButton {
+.info .metadata .titleAndButton {
     display: flex;
+    margin-right: var(--padding);
 }
 
-.info .metadata .TitleAndButton .title {
+.info .metadata .titleAndButton .title {
     font-size: var(--font-medium);
 
     /* 텍스트 줄수 고정시키는 방법*/
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden; */
+
+    margin-right: var(--padding);
+
+    /* TODO:버튼과 함께 텍스트도 애니메이션 해보려다가 급한일로 중단*/
+    /* transform: transform 300ms ease-in-out; */
+}
+
+.info .metadata .titleAndButton .title.clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-
-    margin-right: var(--padding);
-
 }
 
-.info .metadata .TitleAndButton .moreBtn {
+.info .metadata .titleAndButton .moreBtn {
     height: 100%;
+    /* 회전에 애니메이션을 추가 */
+    transition: transform 300ms ease-in-out;
+}
+
+/* 태그를 180도 회전시킴 */
+.info .metadata .titleAndButton .moreBtn.clicked {
+    transform: rotate(180deg);
 }
 
 .info .view {
@@ -213,7 +230,7 @@ body > .info {
     background-color: var(--red-color);
     color: var(--white-color);
     font-size: var(--font-medium);
-    margin: var(--padding) 0;
+    margin: var(--padding);
     padding: 0 calc(var(--padding) / 2);
 }
 
@@ -280,3 +297,22 @@ body > .info {
     font-size: var(--font-micro);
 }
 
+.infoAndUpNext {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 화면이 768px 이상일때 정의 */
+@media screen and (min-width:768px) {
+    .infoAndUpNext {
+        flex-direction: row;
+        margin: var(--padding);
+    }
+    .infoAndUpNext .info {
+        flex: 1 1 60%;
+    }
+    .infoAndUpNext .upNext {
+        flex: 1 1 40%;
+    }
+    
+}

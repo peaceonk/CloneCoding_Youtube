@@ -1,3 +1,7 @@
+css 모듈화에 대해 알 수 있었다.
+css도 다른 언어와 마찬가지로 상단에 변수를 선언해주고
+그 변수로 제어하면 유지보수에 편리함.(color , padding ...)
+
 
 header {
     .logo {
@@ -66,3 +70,8 @@ display 속성을 -webkit-box 또는 -webkit-inline-box로, 그리고 -webkit-bo
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+
+
+반응형 시 화면 크기에 따른 제어
+@media screen and (min-width:768px){}
