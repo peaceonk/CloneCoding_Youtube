@@ -5,17 +5,24 @@
 ---
 
 >  <br>
-
-1. 마크 다운에서 코드작성법
-> <pre> <code> <_pre> <_code> {code} <_/code> <_/pre> </code> </pre>
-> 밑줄(_) 빼고 작성
+> 
+> 1. 마크 다운에서 코드작성법
+> ```
+> 1.  <code> {code} </code>
+> 2.  <pre>  {code} </pre>
+> 3.  ``` {code} ```      ```는 md작성법을 무시하는 것 같음(HTML작성할떄 등 각괄호 들어갈때 좋은듯)
+> *  단, <pre>  이 안에서는 ```을 쓸 수 없음 </pre>
+> ```
+>
 > <br>  
-2. 이미지 넣는법
+> 
+> 2. 이미지 넣는법
 > <pre>
 > ![Alt text](/image/next9.jpg)
 > </pre>
 >
-3. 강조  
+> 3. 강조  
+> 
 > <pre>
 >   *single asterisks*  
 >   _single underscores_  
@@ -29,7 +36,10 @@
 >   **double asterisks**  
 >   __double underscores__  
 >   ~~cancelline~~  
-4. 링크  
+> 
+> <br>
+> 
+> 4. 링크  
 > - 참조링크  
 > <pre> 
 >  [link keyword][id]
@@ -48,8 +58,7 @@
 > 
 > - 자동연결
 > 일반적인 URL 혹은 이메일주소인 경우 적절한 형식으로 링크를 형성한다.
-> <pre>
-> * 외부링크: <_http://example.com/>
-> * 이메일링크: <_address@example.com>
-> </pre>
-
+> ```
+> - 외부링크: <http://example.com/>
+> - 이메일링크: <address@example.com>
+> ```

@@ -20,10 +20,10 @@ p JS 기초
 <br>
 <br>
 
-- ObjectModel : DOM / BOM / JavaScript Core
-> ![Alt text](https://whal.eu/i/vnJoA86E)
-
-
+- ObjectModel : DOM / BOM / JavaScript Core   
+> 
+> ![Alt text](./file/window.jpg)
+>
 > <code>window</code> 객체는  크게 2가지 의미를 가진다
 >  1.  *전역객체*   
 >  2.   window 또는 frame 과 같은 것을 제어하기 위한 객체
@@ -53,7 +53,7 @@ p JS 기초
 > 위의 GAS node.js 같은 환경들이  javascript를 통해 제어하기 때문
 >
 
-#### DOM / BOM / JavaScript Core 의 각각의 객체들의 사용법을 알고 문제를 해결하는 것이 JavaScript 프로그래밍의 핵심
+#### * DOM / BOM / JavaScript Core 의 각각의 객체들의 사용법을 알고 문제를 해결하는 것이 JavaScript 프로그래밍의 핵심
 
 <br> 
 
