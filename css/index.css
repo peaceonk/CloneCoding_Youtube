@@ -59,7 +59,7 @@ header{
     background-color: var(--black-color);
     color: var(--white-color);
 
-        
+    /* 창위치 상단 고정 */
     position: sticky;
     top: 0;
 }
@@ -88,6 +88,7 @@ button{
     top: 0; */
     text-align: center;
     background-color: var(--black-color);
+    margin: var(--padding);
 }
 .player video {
     width: 100%;
@@ -304,6 +305,7 @@ body > .info {
 .infoAndUpNext {
     display: flex;
     flex-direction: column;
+    margin: var(--padding);
 }
 
 /* 화면이 768px 이상일때 정의 */

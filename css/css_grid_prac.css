@@ -1,5 +1,62 @@
-/* 
-    Flex
-    
-*/
 
+html{
+    /* width: 50%; 
+    height: 50%; */
+}
+
+body{
+    /* background: black;
+    width: 80%; 
+    height: 80%; */
+}
+
+.container{
+    background: beige;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-flow: column nowrap; */
+    
+    justify-content: flex-start;
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+}
+
+.item1 {
+    background: red;
+}
+
+.item2 {
+    background: blue;
+}
+.item3 {
+    background: yellow;
+}
+.item4 {
+    background: rebeccapurple;
+}
+.item5 {
+    background: wheat;
+}
+.item6 {
+    background: teal;
+}
+.item7 {
+    background: yellowgreen;
+}
+.item8 {
+    background: aqua;
+}
+.item9 {
+    background: firebrick;
+}
+.item10 {
+    background: khaki;
+}

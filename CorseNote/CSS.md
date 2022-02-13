@@ -119,8 +119,49 @@ CSS
 
 
 # CSS 기본기
-> df   
-> df
+> div 태그와 같은 **시맨틱(?)태그**들은 안에 내용이 없으면 `display:none;` 상태와 같이 된다.   
+> 따라서 backbround-color든 뭐든 아무것도 되지 않는다.
+>
+> `height:100%`와 `height:100vh` 확실히 다른데
+> - 100% : element의 크기의 100%인 반면
+> - 100vh : 보이는 화면상의 100%이다.  
+>
+> 예를 들어, 보여지는 엘리먼트가 최대화면보다 작을경우 모든 화면을 포함하지 못한다.
+>  100vh은 부모의 크기와 상관없이 작동한다.
+>  
+> --- 
+>
+> ### `display: flex` : 해당 요소가 flex 요소가 된다.
+>  
+> - 요소의 정렬 방향   
+> `flex-direction: row` : 왼쪽에서 오른쪽으로(기본값)  
+> `flex-direction: row-reverse` : 오른쪽에서 왼쪽으로   
+> `flex-direction: column` : 위에서 아래로  
+> `flex-direction: column-reverse` : 아래에서 위로  
+> 
+> <br>
+>
+> - 요소의 줄(block) 제한  
+>  `flex-wrap: nowrap` : 요소들이 한 줄(block)을 내려가지 않는다.{ width로 지정한 값보다 더 작아지기도함 } (기본값)  
+> `flex-wrap: wrap` : 요소들이 정해진 크기보다 작아질 때 다음 줄로 내려감   
+> `flex-wrap: wrap-reverse` : 요소들이 wrap 방향이 반대로 된다.
+>
+> #### `flex-flow: column nowrap` 과 같이 한 번에 방향과 래핑여부를 쓰는 것도 가능!
+>
+> <br>
+>
+>  - 중심축 기준으로 아이템 배치(요소들의 아이템들을 정렬)   
+> `justify-content: flex-start` : X축이 중심축이라면 왼쪽에서 오른쪽으로 Y축이 중심축이라면 위에서 아래로 정렬(기본값)   
+>  `justify-content: flex-end` : start와 반대로    
+> `justify-content: center` : 가운데정렬  
+> `justify-content: space-around` : 각 내부 아이템들에게 상하좌우에 동일한 크기의 여백을 넣어줌   
+> `justify-content: space-evenly` : `space-around`가 row 기준으로 가장 왼쪽요소와 가장 오른쪽 요소들의 여백이 한 개의 요소로 생기는 여백이라서 다른 여백들보다 좀 좁았다면 모든 여백을 동일한 크기로 줌????    
+> `justify-content: space-between` : row 기준으로 왼쪽과 오른쪽을 화면에 딱 맞게 붙이고 나머지 요소들 간격에 여백
+> 
+> #### `justify-content`는 `reverse` 와 달리 아이템의 순서가 역전되는 것은 아님(워드 왼쪽정렬/오른쪽 정렬 느낌)
+> 
+> - 중심축과 다른축 기준으로 아이템 배치
+> `align-items` : 
 
 <br>
 
