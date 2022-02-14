@@ -13,7 +13,7 @@ body{
 .container{
     background: beige;
     /* width: 100vw; */
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
 
     flex-direction: row;
@@ -21,6 +21,8 @@ body{
     /* flex-flow: column nowrap; */
     
     justify-content: flex-start;
+    align-items: baseline;
+    align-content: space-between;
 }
 
 .item{
@@ -29,24 +31,38 @@ body{
     border: 1px solid;
 }
 
+.itemSE{
+    width: 90px;
+    height: 110px;
+    border: 1px solid black;
+}
+
 .item1 {
     background: red;
+    padding: 20px;
+    order: 4;
 }
 
 .item2 {
     background: blue;
+    order: 3;
 }
 .item3 {
     background: yellow;
+    order: 5;
 }
 .item4 {
     background: rebeccapurple;
+    order: 1;
 }
 .item5 {
     background: wheat;
+    order: 2;
 }
+
 .item6 {
     background: teal;
+    margin: 30px;
 }
 .item7 {
     background: yellowgreen;
@@ -59,4 +75,37 @@ body{
 }
 .item10 {
     background: khaki;
+}
+.item11 {
+    background: chartreuse;
+    padding: 30px;
+}
+
+.item12 {
+    background: darkorange;
+}
+.item13 {
+    background: turquoise;
+}
+.item14 {
+    background: saddlebrown;
+}
+.item15 {
+    background: slateblue;
+}
+.item16 {
+    background: darkgrey;
+    margin: 20px;
+}
+.item17 {
+    background: fuchsia;
+}
+.item18 {
+    background: green;
+}
+.item19 {
+    background: goldenrod;
+}
+.item20 {
+    background: hotpink;
 }

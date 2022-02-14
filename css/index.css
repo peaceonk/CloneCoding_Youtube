@@ -78,7 +78,7 @@ header .icons .fa-search{
 /* TODO: 이거 왜 백그라운드 기본으로 들어가있지? 이거 설정안해주면 안하얌.. 나만그래 
 어디선가 버튼에 회색배경이 깔림*/
 button{
-    background-color: var(--white-color);;
+    background-color: var(--white-color);
 }
 
 /* Video Player */

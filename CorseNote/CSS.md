@@ -1,41 +1,23 @@
 CSS
 ===
-참고 : https://www.youtube.com/watch?v=67stn7Pu7s4
+youtube클론코딩 : https://www.youtube.com/watch?v=67stn7Pu7s4
 ---
-
-<hr>
-
--   HTML 파일에서는 되도록 정보만 담도록한다.
-> 제어문(JS같은)은 따로 작성하는 것이 로드에도/유지보수에도 좋다.  
-> HTML emmet : (알고있던 거지만)  
-> 태그명(.클래스명)>자식엘리먼트${엘리먼트에 들어갈 텍스트}*반복할 횟수  
-> 띄워쓰기하면 안됨
-> 
-> 예시
-> <pre>
->   div.container>div.item.item4{content$}*10  
-> </pre>
-> 결과   
-> ```
->   <div class="container">
->        <div class="item item4">content1</div>
->        <div class="item item4">content2</div>
->        <div class="item item4">content3</div>
->        <div class="item item4">content4</div>
->        <div class="item item4">content5</div>
->        <div class="item item4">content6</div>
->        <div class="item item4">content7</div>
->        <div class="item item4">content8</div>
->        <div class="item item4">content9</div>
->        <div class="item item4">content10</div>
->    </div>
->```
-> 
+CSS Flex : https://www.youtube.com/watch?v=7neASrWEFEM
 <hr>
 
 #   CSS 모듈화
->css도 다른 언어와 마찬가지로 상단에 변수를 선언해주고 그 변수로 제어하면 유지보수에 편리함.(color , padding ...)
 > ```
+>   :root{
+>       --text-color: #f0f4f5;
+>       --background-color: #263343;
+>       --white-color: #f0f4f5;
+>   }
+> ```
+>css도 다른 언어와 마찬가지로 상단에 변수를 선언해주고 그 변수로 제어하면 유지보수에 편리함.(color , padding ...)
+> 
+> <br>      
+>
+> ```     
 > header {
 >    .logo {
 >        
@@ -54,7 +36,9 @@ CSS
 > react를 쓰면 
 > PostCSS를 써서 모듈화하면서 쓸 수있다.
 >
-> 반응형 시 화면 크기에 따른 제어
+>   <br>
+>
+> - 반응형 시 화면 크기에 따른 제어
 > <pre><code>@media screen and (min-width:768px){}</code></pre>
 >
 
@@ -133,6 +117,8 @@ CSS
 >
 > ### `display: flex` : 해당 요소가 flex 요소가 된다.
 >  
+> #### flex는 대부분에서 지원하지만 몇몇 새로나온 속성값들은 지원이 안되는 브라우저도 많으므로 충분히 알아보고 사용할것.
+> 
 > - 요소의 정렬 방향   
 > `flex-direction: row` : 왼쪽에서 오른쪽으로(기본값)  
 > `flex-direction: row-reverse` : 오른쪽에서 왼쪽으로   
@@ -156,12 +142,33 @@ CSS
 > `justify-content: center` : 가운데정렬  
 > `justify-content: space-around` : 각 내부 아이템들에게 상하좌우에 동일한 크기의 여백을 넣어줌   
 > `justify-content: space-evenly` : `space-around`가 row 기준으로 가장 왼쪽요소와 가장 오른쪽 요소들의 여백이 한 개의 요소로 생기는 여백이라서 다른 여백들보다 좀 좁았다면 모든 여백을 동일한 크기로 줌????    
-> `justify-content: space-between` : row 기준으로 왼쪽과 오른쪽을 화면에 딱 맞게 붙이고 나머지 요소들 간격에 여백
+> `justify-content: space-between` : row 기준으로 왼쪽과 오른쪽을 딱 맞게 붙이고 나머지 요소들 간격에 여백
 > 
 > #### `justify-content`는 `reverse` 와 달리 아이템의 순서가 역전되는 것은 아님(워드 왼쪽정렬/오른쪽 정렬 느낌)
 > 
-> - 중심축과 다른축 기준으로 아이템 배치
-> `align-items` : 
+> - 중심축과 다른축 기준으로 아이템 배치   
+> ![Alt text](./file/baseline1.jpg)  
+> ![Alt text](./file/baseline2.jpg)
+>`align-items:baseline` : 위와같이 아이템1에 padding이 있어서 텍스트의 위치가 안맞게 되었을떄 텍스트를 균등하게 해준다.  
+> `align-content:space-between` : 중심축과 다른 축 기준 양옆으로 컨텐츠를 딱 맞게 붙이고 나머지 요소들 간격에 여백(`justify-content`의 기능을 같고 기준축만 달라진다.)   
+>
+> ---
+> ### 아이템에 쓰는 속성값들 
+> - 아이템의 순서   
+>  `order: 1` : 명령어로 요소들의 순서를 바꿀 수도 있도 있음(order를 지정해주지 않은 애들이 우선순위가 먼저 인것 같음.)   [실제 html구조가 변하는 것은 아님 / 시각적으로만 순서 변경]
+>
+> - 아이템이 컨테이너에서 차지할 비율?   
+> `flex-basis: 60%` : 컨테이너에서 기본적으로 그 요소 차지할 비율을 결정지음.(기본값 : auto)  
+> `flex-grow: 1` : 해당 요소가 컨테이너의 크기가 커졌을때 컨테이너를 채우려는 정도? / 컨테이너의 크기에 따라 자신의 고유한 사이즈를 넘어나게 할 수있음(기본값:0)   
+>  `flex-shrink: 1` :  해당 요소가 컨테이너의 크기가 작아졌을때 컨테이너를 채우려는 정도? / 컨테이너의 크기에 따라 자신의 고유한 사이즈를 넘어나게 할 수있음(기본값:0)  
+> #### `flex: 1 1 50%` : 이런식으로 표현도 가능함
+>    `flex:1` 만 쓸 경우 자동으로 basis:0%
+>  ##### `flex-grow`와`flex-shrink`로 컨테이너가 크거나 작아질때 각 요소들이 어떻게 변화할지 비율을 결정 지을 수 있음.
+>
+> <br>
+>
+> `align-self : center` : align-content의 요소버전 이 아이템 하나만 특별하게 배치할 수 있음
+
 
 <br>
 
