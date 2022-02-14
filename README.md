@@ -1,22 +1,18 @@
 CloneCoding_Youtube  
-& JS Course - 생활코딩
 ===
-1. HTML & CSS 위주의 Youtube CloneCoding  - 엘리
+HTML & CSS 위주의 Youtube CloneCoding
 
-2. JS 기초 - 생활코딩(인프런)
+- HTML : https://www.notion.so/peaceonk/HTML-8ddda37147064dafa4204bbc24fe024d
 
-3. MarkDown 작성법
+- CSS : https://www.notion.so/peaceonk/CSS-150829596abd449d80cb0908cce51de7
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 
-TODO: 좀더 발전 시킨다면 
----
+----
+
+### TODO: 좀더 발전 시킨다면  
+
+#### 기능추가
 
 - 제목 애니메이션
 
@@ -29,11 +25,8 @@ TODO: 좀더 발전 시킨다면
 - 영상 더 넓게 보기
 - 도메인 내에서 PIP
 
-<br>
-<br>
-<br>
-
-FIXME:
 ---
 
-- 화면이 너무 작아졌을때 info를 안보이게하고 / 다음 동영상들만 노출시키기
+### FIXME: 수정할 사항
+
+- 화면이 너무 작아졌을때 info를 안보이게 / 다음 동영상들만 노출
